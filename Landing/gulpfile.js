@@ -12,19 +12,19 @@ gulp.task('css', function() {
     	autoprefixer({ overrideBrowserslist: ['last 10 versions'] }),
     	mqpacker()
     ]))
-    .pipe(gulp.dest('dest/css'));
+    .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('cssmin', function() {
-  return gulp.src('dest/css/styles.css')
+  return gulp.src('build/css/styles.css')
     .pipe(csso())
     .pipe(rename('styles.min.css'))
-    .pipe(gulp.dest('dest/css'));
+    .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('js', function(){
   return gulp.src('src/js/scripts.js')
   .pipe(uglify())
   .pipe(rename('scripts.min.js'))
-  .pipe(gulp.dest('dest/js'));
+  .pipe(gulp.dest('build/js'));
 });

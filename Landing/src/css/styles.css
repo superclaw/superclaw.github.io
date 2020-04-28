@@ -56,6 +56,7 @@ img {
 a {
   text-decoration: none;
   color: #000;
+  transition: 150ms;
 }
 
 a:focus {
@@ -247,8 +248,8 @@ button:focus {
 .button {
   background-blend-mode: multiply;
   display: block;
-  font-weight: 400;
   font: inherit;
+  font-weight: 400;
   text-align: center;
   background: none;
   border: none;
@@ -265,7 +266,7 @@ button:focus {
 @media (max-width: 1500px) {
   .button--orange {
     width: 321px;
-    padding: 23px 0px;
+    padding: 23px 0;
   }
 }
 @media (max-width: 720px) {
@@ -296,12 +297,14 @@ button:focus {
 }
 @media (min-width: 1024px) {
   .button--pink:hover {
-    background-color: rgba(180, 180, 180, .7);
+    background-color: #fc557c;
+    color: #fff;
   }
 }
 @media (max-width: 1023px) {
   .button--pink:active {
-    background-color: rgba(180, 180, 180, .7);
+    background-color: #fc557c;
+    color: #fff;
   }
 }
 
@@ -316,6 +319,10 @@ button:focus {
     border-radius: 100%;
     background: url('../img/icons/contacts.png') center no-repeat;
     background-size: 12px 12px;
+  }
+  .button--icon--call:active {
+    background-color: #fff;
+    opacity: .5;
   }
 }
 
@@ -694,13 +701,21 @@ button:focus {
   }
 }
 
-.menu__link:hover {
-  text-decoration: none;
-  border-bottom: 1px solid;
-  color: #fc557c;
+@media (min-width: 1024px) {
+  .menu__link:hover {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    color: #fc557c;
+  }
 }
+
 .menu__link:active {
   color: #ff8f5a;
+}
+@media (max-width: 1023px) {
+  .menu__link:active {
+    color: #fc557c;
+  }
 }
 
 .menu__link--gray {
@@ -1316,8 +1331,22 @@ button:focus {
 .media__item {
   display: inline-block;
 }
+
 .media__item:not(:last-child) {
   margin-right: 16px;
+}
+
+@media (min-width: 1024px) {
+  .media__item:hover {
+    transform: scale(1.2);
+    transition: 150ms;
+  }
+}
+
+@media (max-width: 1023px) {
+  .media__item:active {
+    opacity: .5;
+  }
 }
 
 .media__button {
