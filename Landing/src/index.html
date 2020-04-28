@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery.js" defer></script>
+    <script src="js/swiper.min.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__wrapper wrapper">
+        <button class="button-menu" aria-label="Меню"></button>
+        <nav class="menu header__menu">
+          <ul class="menu__list menu__list--row menu__list--mobile">
+            <li class="menu__item"><a class="menu__link" href="#services">Услуги</a></li>
+            <li class="menu__item"><a class="menu__link" href="#examples">Портфолио</a></li>
+            <li class="menu__item"><a class="menu__link" href="#prices">Стоимость</a></li>
+          </ul>
+        </nav>
+        <a href="tel:84999555577" class="header__tel">+7 (499) 995-55-77</a>
+        <button class="button button--pink button--icon--call button--request--call">Заказать звонок</button>
+      </div>
+    </header>
+    <main>
+      <iframe name="submit" hidden="true"></iframe>
+      <div class="request request--call">
+        <div class="request__container">
+          <form target="submit" enctype="multipart/form-data" method="post" class="request__form">
+            <h4 class="h h--4">Обратная связь:</h4>
+            <label class="request__label">
+              Имя:
+              <input type="text" class="request__input request__input--focused" size="15" placeholder="Введите имя" required>
+            </label>
+            <label class="request__label">
+              Телефон:
+              <input type="tel" class="request__input" size="15" pattern="8[0-9]{10}" placeholder="89123456789" required>
+            </label>
+            <button type="submit" class="button button--pink button-submit request__button-submit" aria-label="Отправить">Отправить</button>
+            <div class="message request__message">
+              <h4 class="h h--4">Данные отправлены</h4>
+            </div>
+          </form>
+          <button class="button-cancel request__button-cancel" aria-label="Закрыть"></button>
+        </div>
+      </div>
+      <div class="request request--mail">
+        <div class="request__container">
+          <form target="submit" enctype="multipart/form-data" method="post" class="request__form">
+            <h4 class="h h--4">Обратная связь:</h4>
+            <label class="request__label">
+              Имя:
+              <input type="text" class="request__input request__input--focused" size="15" placeholder="Введите имя" required>
+            </label>
+            <label class="request__label">
+              Телефон:
+              <input type="tel" class="request__input" size="15" pattern="8[0-9]{10}" placeholder="89123456789" required>
+            </label>
+            <label class="request__label">
+              Адрес электронной почты:
+              <input type="email" class="request__input" size="25" placeholder="Введите e-mail" required>
+            </label>
+            <button type="submit" class="button button--pink button-submit request__button-submit" aria-label="Отправить">Отправить</button>
+            <div class="message request__message">
+              <h4 class="h h--4">Данные отправлены</h4>
+            </div>
+          </form>
+          <button class="button-cancel request__button-cancel" aria-label="Закрыть"></button>
+        </div>
+      </div>
+      <a class="button-up" href="#"></a>
+      <section class="title">
+        <div class="title__wrapper wrapper">
+          <div class="title__photo-wrapper">
+            <img src="img/human.webp" alt="Дмитрий Алексеев" class="title__photo">
+          </div>
+          <div class="title__content">
+            <h1 class="title__name h h--1">Дмитрий Алексеев</h1>
+            <span class="title__specialty">Frontend-разработчик и веб-верстальщик</span>
+            <button class="title__more-info button button--orange button--request--mail">Узнать больше</button>
+          </div>
+        </div>
+        <div class="symbols symbols--pink" aria-hidden="true">
+          <span class="symbols__sym symbols__sym--1">{&nbsp;}</span>
+          <span class="symbols__sym symbols__sym--2">&lt;div&gt;</span>
+          <span class="symbols__sym symbols__sym--3">#</span>
+          <span class="symbols__sym symbols__sym--4">&lt;div&gt;</span>
+          <span class="symbols__sym symbols__sym--5">&lt;&frasl;&gt;</span>
+        </div>
+      </section>
+      <section class="services" id="services">
+        <div class="wrapper">
+          <h2 class="h h--2">Что я делаю</h2>
+          <ul class="skills">
+            <li class="skills__item skills__item--1">
+              <span class="skills__description description">Вёрстка лендинг&ndash;страниц и&nbsp;сайтов любой сложности</span>
+            </li>
+            <li class="skills__item skills__item--2">
+              <span class="skills__description description">Адаптивная вёрстка под&nbsp;все браузеры и&nbsp;устройства</span>
+            </li>
+            <li class="skills__item skills__item--3">
+              <span class="skills__description description">Frontend&ndash;разработка и&nbsp;программирование</span>
+            </li>
+            <li class="skills__item skills__item--4">
+              <span class="skills__description description">Исправление и&nbsp;доработка существующей вёрстки</span>
+            </li>
+          </ul>
+          <button class="services__button button button--orange button--request--mail">Узнать стоимость</button>
+        </div>
+      </section>
+      <section class="examples" id="examples">
+        <div class="wrapper">
+          <h2 class="h h--2">Примеры моих работ</h2>
+          <div class="sites">
+            <div class="sites__slider">
+              <ul class="sites__list">
+                <li class="sites__item">
+                  <a class="sites__link" href="#">
+                    <img src="img/site1.jpg" alt="Сайт психолога Веры Антоновой">
+                    <span class="sites__description description">Сайт психолога Веры Антоновой</span>
+                  </a>
+                </li>
+                <li class="sites__item">
+                  <a class="sites__link" href="#">
+                    <img src="img/site2.jpg" alt="Сайт магазина детской одежды">
+                    <span class="sites__description description">Сайт магазина детской одежды</span>
+                  </a>
+                </li>
+                <li class="sites__item">
+                  <a class="sites__link" href="#">
+                    <img src="img/site3.jpg" alt="Сайт магазина &laquo;Рыболов&raquo;">
+                    <span class="sites__description description">Сайт магазина &laquo;Рыболов&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="pagination sites__pagination" aria-hidden="true"></div>
+            </div>
+            <button class="sites__arrow sites__arrow--left" aria-label="Предыдущие примеры"></button>
+            <button class="sites__arrow sites__arrow--right" aria-label="Следующие примеры"></button> 
+          </div>
+          <button class="examples__button button button--orange button--request--mail">Заказать проект</button>
+        </div>
+      </section>
+      <section class="prices" id="prices">
+        <div class="symbols symbols--white" aria-hidden="true">
+          <span class="symbols__sym symbols__sym--6">{&nbsp;}</span>
+          <span class="symbols__sym symbols__sym--7">{&nbsp;}</span>
+          <span class="symbols__sym symbols__sym--8">#</span>
+          <span class="symbols__sym symbols__sym--9">&lt;div&gt;</span>
+          <span class="symbols__sym symbols__sym--10">&lt;&frasl;&gt;</span>
+        </div>
+        <div class="prices__wrapper wrapper">
+          <h3 class="h h--3 prices__title">Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего за&nbsp;4&nbsp;часа.*</h3>
+          <p class="prices__footnote">Срок и стоимость могут отличаться от заявленных и&nbsp;расcчитываются&ensp;индивидуально, в&nbsp;зависимости от&nbsp;сложности задач.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper wrapper">
+        <nav class="menu footer__menu">
+          <ul class="menu__list menu__list--column">
+            <li class="menu__item"><a class="menu__link menu__link--gray" href="#services">Услуги</a></li>
+            <li class="menu__item"><a class="menu__link menu__link--gray" href="#examples">Портфолио</a></li>
+            <li class="menu__item"><a class="menu__link menu__link--gray" href="#prices">Стоимость</a></li>
+          </ul>
+        </nav>
+        <address class="contacts">
+          <a href="tel:84999555577" class="contacts__item icon icon--phone">+7 (499) 995-77-55</a>
+          <a href="mailto:dmitry@alekseev.com" class="contacts__item icon icon--mail">dmitry@alekseev.com</a>
+        </address>
+        <div class="media-container">
+          <button class="button button--pink footer__request-call button--request--call">Заказать звонок</button>
+          <ul class="media">
+            <li class="media__item"><a href="#" class="media__button media__button--vk" aria-label="Вконтакте"></a></li>
+            <li class="media__item"><a href="#" class="media__button media__button--fb" aria-label="Facebook"></a></li>
+            <li class="media__item"><a href="#" class="media__button media__button--tw" aria-label="Twitter"></a></li>
+            <li class="media__item"><a href="#" class="media__button media__button--in" aria-label="Instagram"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">&copy; Дмитрий Алексеев, 2016 &ndash; 2018</div>
+    </footer>
+  </body>
+</html>
+   
