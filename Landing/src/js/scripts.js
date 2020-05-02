@@ -130,6 +130,54 @@ $(function()
     setTimeout(closerequest, 2000);
   }
 
+  $('.request__input[type="tel"]').inputmask({"mask": "+7 (999) 999-9999"});
+
+  $.validator.addMethod('minlenghtphone', function (value, element) {
+    return value.replace(/\D+/g, '').length > 10;
+    },
+  "Введите 10 цифр номера");
+
+  $('.request__form').each(function () {
+    $(this).validate({
+      rules: {
+        Имя: {
+          required: true,
+        },
+        Телефон: {
+          required: true,
+          minlenghtphone: 10,
+        },
+        Почта: {
+          required: true,
+          email: true,
+        },
+      },
+      messages: {
+        Имя: {
+          required: "Введите имя",
+        },
+        Телефон: {
+          required: "Введите телефон",
+        },
+        Почта: {
+          required: "Введите e-mail",
+          email: "Введите корректный e-mail",
+        },
+      },
+      submitHandler(form) {
+        var th = $(form);
+        $.ajax({
+          type: 'POST',
+          url: 'mail.php',
+          data: th.serialize(),
+        }).done(() => {
+          submitrequest();
+        });
+        return false;
+      }
+    });
+  });
+
   $('.button--request--call').click(function() {openrequest('.request--call');});
   $('.button--request--mail').click(function() {openrequest('.request--mail');});
   $('.request__button-cancel').click(closerequest);
@@ -138,7 +186,6 @@ $(function()
       if(event.target == this)
         closerequest();
     });
-  $('.request__form').submit(submitrequest);
 
 
   // Symbols

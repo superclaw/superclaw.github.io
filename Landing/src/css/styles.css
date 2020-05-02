@@ -569,7 +569,7 @@ button:focus {
 }
 @media (max-width: 720px) {
   .request__button-submit {
-    margin-top: 20px;
+    margin-top: 25px;
   }
 }
 
@@ -1406,5 +1406,25 @@ button:focus {
 @media (max-width: 720px) {
   .button-menu--active {
     background-size: 25px auto;
+  }
+}
+
+.error {
+  border-color: #bb2200;
+}
+
+label[class$='error'] {
+  position: absolute;
+  right: 30px;
+  margin-top: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  border: 1px #bb2200 solid;
+  background-color: #ffeeee;
+}
+@media (max-width: 720px) {
+  label[class$='error'] {
+    margin-top: 3px;
+    padding: 1px 3px;
   }
 }
