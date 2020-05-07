@@ -889,32 +889,7 @@ button:focus {
 }
 
 
-/* for scripts */
 
-.active {
-  display: block;
-}
-
-.button-up--visible {
-  display: block;
-}
-
-.request--active, .message--active {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.button-menu--active {
-  background: url('../img/icons/close.svg') center center no-repeat;
-  background-size: 32px 32px;
-  -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-          transform: rotate(360deg);
-  border: none;
-  z-index: 4;
-}
 
 .error {
   border-color: #bb2200;
@@ -1402,4 +1377,31 @@ label[class$='error'] {
     margin-top: 3px;
     padding: 1px 3px;
   }
+}
+
+/* for scripts */
+
+.active {
+  display: block;
+}
+
+.button-up--visible {
+  display: block;
+}
+
+.request--active, .message--active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button-menu--active {
+  background: url('../img/icons/close.svg') center center no-repeat;
+  background-size: 32px 32px;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  border: none;
+  z-index: 4;
 }
