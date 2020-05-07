@@ -7,7 +7,9 @@
     <meta name="theme-color" content="#">
     <link rel="stylesheet" href="css/styles.min.css">
     <script src="js/jquery.js" defer></script>
-    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.min.js" defer></script>
+    <script src="js/jquery.inputmask.min.js" defer></script>
+    <script src="js/jquery.validate.min.js" defer></script>
     <script src="js/scripts.min.js" defer></script>
     <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -33,22 +35,21 @@
       </div>
     </header>
     <main>
-      <iframe name="submit" hidden="true"></iframe>
       <div class="request request--call">
         <div class="request__container">
-          <form target="submit" enctype="multipart/form-data" method="post" class="request__form">
+          <form enctype="multipart/form-data" method="post" class="request__form">
             <h4 class="h h--4">Обратная связь:</h4>
             <label class="request__label">
               Имя:
-              <input type="text" class="request__input request__input--focused" size="15" placeholder="Введите имя" required>
+              <input type="text" name="Имя" class="request__input request__input--focused" size="15" placeholder="Ваше имя">
             </label>
             <label class="request__label">
               Телефон:
-              <input type="tel" class="request__input" size="15" pattern="8[0-9]{10}" placeholder="89123456789" required>
+              <input type="tel" name="Телефон" class="request__input" size="15" placeholder="+7 (___) ___-____">
             </label>
             <button type="submit" class="button button--pink button-submit request__button-submit" aria-label="Отправить">Отправить</button>
             <div class="message request__message">
-              <h4 class="h h--4">Данные отправлены</h4>
+              <p class="message__text">Спасибо, ваша заявка отправлена.</p>
             </div>
           </form>
           <button class="button-cancel request__button-cancel" aria-label="Закрыть"></button>
@@ -56,19 +57,19 @@
       </div>
       <div class="request request--mail">
         <div class="request__container">
-          <form target="submit" enctype="multipart/form-data" method="post" class="request__form">
+          <form enctype="multipart/form-data" method="post" class="request__form">
             <h4 class="h h--4">Обратная связь:</h4>
             <label class="request__label">
               Имя:
-              <input type="text" class="request__input request__input--focused" size="15" placeholder="Введите имя" required>
+              <input type="text" name="Имя" class="request__input request__input--focused" size="15" placeholder="Ваше имя">
             </label>
             <label class="request__label">
               Телефон:
-              <input type="tel" class="request__input" size="15" pattern="8[0-9]{10}" placeholder="89123456789" required>
+              <input type="tel" name="Телефон" class="request__input" size="15" placeholder="+7 (___) ___-____">
             </label>
             <label class="request__label">
               Адрес электронной почты:
-              <input type="email" class="request__input" size="25" placeholder="Введите e-mail" required>
+              <input type="email" name="Почта" class="request__input" size="25" placeholder="Ваш e-mail">
             </label>
             <button type="submit" class="button button--pink button-submit request__button-submit" aria-label="Отправить">Отправить</button>
             <div class="message request__message">
@@ -126,19 +127,19 @@
               <ul class="sites__list">
                 <li class="sites__item">
                   <a class="sites__link" href="#">
-                    <img src="img/site1.jpg" alt="Сайт психолога Веры Антоновой">
+                    <img class="sites__img" src="img/site1.jpg" alt="Сайт психолога Веры Антоновой">
                     <span class="sites__description description">Сайт психолога Веры Антоновой</span>
                   </a>
                 </li>
                 <li class="sites__item">
                   <a class="sites__link" href="#">
-                    <img src="img/site2.jpg" alt="Сайт магазина детской одежды">
+                    <img class="sites__img" src="img/site2.jpg" alt="Сайт магазина детской одежды">
                     <span class="sites__description description">Сайт магазина детской одежды</span>
                   </a>
                 </li>
                 <li class="sites__item">
                   <a class="sites__link" href="#">
-                    <img src="img/site3.jpg" alt="Сайт магазина &laquo;Рыболов&raquo;">
+                    <img class="sites__img" src="img/site3.jpg" alt="Сайт магазина &laquo;Рыболов&raquo;">
                     <span class="sites__description description">Сайт магазина &laquo;Рыболов&raquo;</span>
                   </a>
                 </li>

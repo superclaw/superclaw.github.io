@@ -59,16 +59,16 @@ img {
 a {
   text-decoration: none;
   color: #000;
-  -webkit-transition: 150ms;
-  -o-transition: 150ms;
-  transition: 150ms;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 a:focus {
   outline: none;
 }
 
-a:hover {
+a:hover, a:focus {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -84,10 +84,6 @@ p {
 
 button:focus {
   outline: none;
-}
-
-[hidden] {
-  display: none !important;
 }
 
 .scroll-off {
@@ -243,9 +239,9 @@ button:focus {
   padding: 19px 0;
   background: #ff4e2e;
   color: #fff;
-  -webkit-transition: 150ms;
-  -o-transition: 150ms;
-  transition: 150ms;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 .button--pink {
@@ -253,9 +249,9 @@ button:focus {
   color: #fc557c; 
   padding: 12px 40px;
   border: 1px solid;
-  -webkit-transition: 150ms;
-  -o-transition: 150ms;
-  transition: 150ms;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 .button-menu {
@@ -267,9 +263,10 @@ button:focus {
   margin: 0;
   background: url('../img/icons/menu.svg') center center no-repeat;
   background-size: 45px 32px;
-  -webkit-transition: 150ms;
-  -o-transition: 150ms;
-  transition: 150ms;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  z-index: 1;
 }
 
 .button-up {
@@ -288,9 +285,9 @@ button:focus {
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
   z-index: 1;
-  -webkit-transition: 150ms;
-  -o-transition: 150ms;
-  transition: 150ms;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 .button-submit {
@@ -306,9 +303,9 @@ button:focus {
   height: 25px;
   background: url('../img/icons/close.svg') center center no-repeat;
   background-size: 100%;
-  -webkit-transition: 150ms;
-  -o-transition: 150ms;
-  transition: 150ms;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 
@@ -339,6 +336,7 @@ button:focus {
 .h--4 {
   font-size: 25px;
 }
+
 
 
 /* body */
@@ -430,7 +428,14 @@ button:focus {
       -ms-flex-align: center;
           align-items: center;
   z-index: 4;
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.9);
+}
+
+.message__text {
+  margin: 0;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 /* header */
@@ -683,13 +688,13 @@ button:focus {
   -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1);
           box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1);
 }
-.sites__arrow:hover {
+.sites__arrow:hover, .sites__arrow:focus {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition: 150ms;
-  -o-transition: 150ms;
-  transition: 150ms;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 .sites__arrow--left {
@@ -702,13 +707,13 @@ button:focus {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.sites__arrow--right:hover {
+.sites__arrow--right:hover, .sites__arrow--right:focus {
   -webkit-transform: scale(1.2) rotate(180deg);
       -ms-transform: scale(1.2) rotate(180deg);
           transform: scale(1.2) rotate(180deg);
-  -webkit-transition: 150ms;
-  -o-transition: 150ms;
-  transition: 150ms;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 .pagination {
@@ -753,7 +758,7 @@ button:focus {
           flex-shrink: 0;
 }
 
-.sites__item img {
+.sites__img {
   width: 100%;
 }
 
@@ -894,7 +899,7 @@ button:focus {
   display: block;
 }
 
-.request--active {
+.request--active, .message--active {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -909,6 +914,20 @@ button:focus {
           transform: rotate(360deg);
   border: none;
   z-index: 4;
+}
+
+.error {
+  border-color: #bb2200;
+}
+
+label[class$='error'] {
+  position: absolute;
+  right: 30px;
+  margin-top: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  border: 1px #bb2200 solid;
+  background-color: #ffeeee;
 }
 
 @media (max-width: 1500px) {
@@ -964,31 +983,31 @@ button:focus {
 }
 
 @media (min-width: 1024px) {
-  .button--orange:hover {
+  .button--orange:hover, .button--orange:focus {
     background-color: #b42500;
   }
-  .button--pink:hover {
+  .button--pink:hover, .button--pink:focus {
     background-color: #fc557c;
     color: #fff;
   }
-  .button-up:hover {
+  .button-up:hover, .button-up:focus {
     background-color: rgba(0, 0, 0, .12);
   }
-  .button-cancel:hover {
+  .button-cancel:hover, .button-cancel:focus {
     opacity: .5;
   }
-  .menu__link:hover {
+  .menu__link:hover, .menu__link:focus {
     text-decoration: none;
     border-bottom: 1px solid;
     color: #fc557c;
   }
-  .media__item:hover {
+  .media__item:hover, .media__item:focus {
     -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-            transform: scale(1.2);
-    -webkit-transition: 150ms;
-    -o-transition: 150ms;
-    transition: 150ms;
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
   }
 }
 
@@ -1050,18 +1069,18 @@ button:focus {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: fixed;
     overflow-y: auto;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: -380px;
     padding: 120px 60px 0;
     width: 380px;
     background-color: #fff;
     -webkit-box-shadow: inset -10px -10px 30px -10px rgba(0, 0, 0, .1);
-    box-shadow: inset -10px -10px 30px -10px rgba(0, 0, 0, .1);
+            box-shadow: inset -10px -10px 30px -10px rgba(0, 0, 0, .1);
     z-index: 2;
   }
   .menu__list--mobile .menu__item {
@@ -1081,22 +1100,22 @@ button:focus {
   .title__wrapper {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
     -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
   .title__content {
     position: relative;
     left: 0;
     -webkit-align-self: flex-start;
-    -ms-flex-item-align: start;
-    align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
     padding: 55px 0;
     width: 100%;
     text-align: center;
@@ -1109,8 +1128,8 @@ button:focus {
     margin-right: 0;
     padding-left: 250px;
     -webkit-align-self: flex-end;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
     background-position: top;
     background-position-y: 50px;
     background-size: 612px auto;
@@ -1231,16 +1250,20 @@ button:focus {
     font-size: 14px;
   }
   .request__button-submit {
-    margin-top: 20px;
+    margin-top: 25px;
   }
   .request__button-cancel {
     top: 10px;
     right: 15px;
   }
+  .message__text {
+    font-size: 16px;
+  }
   .menu__list--column {
     padding-top: 0;
   }
   .menu__list--mobile {
+    left: -320px;
     width: 320px;
     padding: 100px 60px 0 30px;
   }
@@ -1288,8 +1311,8 @@ button:focus {
     padding: 43px 0 57px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .skills__item {
     padding-top: 70px;
@@ -1307,7 +1330,7 @@ button:focus {
     width: 210px;
     line-height: 24px;
   }
-  .examples {
+    .examples {
     padding: 43px 0 51px;
   }
   .sites {
@@ -1337,8 +1360,8 @@ button:focus {
   }
   .footer__wrapper {
     -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     padding: 48px 20px 45px;
   }
   .footer__menu {
@@ -1374,5 +1397,9 @@ button:focus {
   }
   .button-menu--active {
     background-size: 25px auto;
+  }
+  label[class$='error'] {
+    margin-top: 3px;
+    padding: 1px 3px;
   }
 }
