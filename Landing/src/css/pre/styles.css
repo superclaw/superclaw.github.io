@@ -868,6 +868,7 @@ button:focus {
   height: 28px;
   background: url('../img/icons/media.png') no-repeat;
 }
+
 .media__button--vk {
   background-position: 0 0;
 }
@@ -888,22 +889,6 @@ button:focus {
   padding: 29px 0 33px;
 }
 
-
-
-
-.error {
-  border-color: #bb2200;
-}
-
-label[class$='error'] {
-  position: absolute;
-  right: 30px;
-  margin-top: 5px;
-  padding: 2px 5px;
-  font-size: 12px;
-  border: 1px #bb2200 solid;
-  background-color: #ffeeee;
-}
 
 @media (max-width: 1500px) {
   .button--orange {
@@ -976,10 +961,10 @@ label[class$='error'] {
     border-bottom: 1px solid;
     color: #fc557c;
   }
-  .media__item:hover, .media__item:focus {
+  .media__button:hover, .media__button:focus {
     -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
     -webkit-transition: 300ms;
     -o-transition: 300ms;
     transition: 300ms;
@@ -1044,8 +1029,8 @@ label[class$='error'] {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     position: fixed;
     overflow-y: auto;
     top: 0;
@@ -1055,7 +1040,7 @@ label[class$='error'] {
     width: 380px;
     background-color: #fff;
     -webkit-box-shadow: inset -10px -10px 30px -10px rgba(0, 0, 0, .1);
-            box-shadow: inset -10px -10px 30px -10px rgba(0, 0, 0, .1);
+    box-shadow: inset -10px -10px 30px -10px rgba(0, 0, 0, .1);
     z-index: 2;
   }
   .menu__list--mobile .menu__item {
@@ -1075,22 +1060,22 @@ label[class$='error'] {
   .title__wrapper {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
     -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .title__content {
     position: relative;
     left: 0;
     -webkit-align-self: flex-start;
-        -ms-flex-item-align: start;
-            align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
     padding: 55px 0;
     width: 100%;
     text-align: center;
@@ -1103,8 +1088,8 @@ label[class$='error'] {
     margin-right: 0;
     padding-left: 250px;
     -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
-            align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
     background-position: top;
     background-position-y: 50px;
     background-size: 612px auto;
@@ -1128,7 +1113,7 @@ label[class$='error'] {
   .contacts__item {
     font-size: 20px;
   }
-  .media__item:active {
+  .media__button:active {
     opacity: .5;
   }
 }
@@ -1286,8 +1271,8 @@ label[class$='error'] {
     padding: 43px 0 57px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .skills__item {
     padding-top: 70px;
@@ -1305,7 +1290,7 @@ label[class$='error'] {
     width: 210px;
     line-height: 24px;
   }
-    .examples {
+  .examples {
     padding: 43px 0 51px;
   }
   .sites {
@@ -1335,8 +1320,8 @@ label[class$='error'] {
   }
   .footer__wrapper {
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 48px 20px 45px;
   }
   .footer__menu {
@@ -1404,4 +1389,18 @@ label[class$='error'] {
   transform: rotate(360deg);
   border: none;
   z-index: 4;
+}
+
+.error {
+  border-color: #bb2200;
+}
+
+label[class$='error'] {
+  position: absolute;
+  right: 30px;
+  margin-top: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  border: 1px #bb2200 solid;
+  background-color: #ffeeee;
 }
