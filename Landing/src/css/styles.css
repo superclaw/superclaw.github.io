@@ -145,7 +145,6 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  font-family: inherit;
   font-weight: 800;
   z-index: 0;
   --move-x: 0;
@@ -244,7 +243,6 @@ button:focus {
 .button {
   background-blend-mode: multiply;
   display: block;
-  font: inherit;
   font-weight: 400;
   text-align: center;
   background: none;
@@ -422,7 +420,6 @@ button:focus {
 
 .h {
   margin: 0;
-  font-family: inherit;
 }
 
 .h--1 {
@@ -599,7 +596,6 @@ button:focus {
 
 .message__text {
   margin: 0;
-  font-family: inherit;
   font-weight: 700;
   font-size: 20px;
 }
@@ -734,7 +730,6 @@ button:focus {
 }
 
 .header__tel {
-  font-family: inherit;
   font-weight: 700;
   margin: -3px 28px 0 auto;
   font-size: 25px;
@@ -1069,6 +1064,7 @@ button:focus {
 }
 
 .sites__arrow {
+  background-blend-mode: multiply;
   position: absolute;
   top: 219px;
   border: 0;
@@ -1078,10 +1074,6 @@ button:focus {
   background: url('../img/icons/arrow.png') no-repeat;
   background-size: 100% 100%;
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1);
-}
-.sites__arrow:hover, .sites__arrow:focus {
-  transform: scale(1.2);
-  transition: 300ms;
 }
 @media (max-width: 1500px) {
   .sites__arrow {
@@ -1094,6 +1086,15 @@ button:focus {
   }
 }
 
+.sites__arrow:hover {
+  transform: scale(1.2);
+  transition: 300ms;
+}
+
+.sites__arrow:focus {
+  background-color: rgba(0, 0, 0, .12);
+}
+
 .sites__arrow--left {
   left: -31px;
 }
@@ -1102,7 +1103,7 @@ button:focus {
   right: -31px;
   transform: rotate(180deg);
 }
-.sites__arrow--right:hover, .sites__arrow--right:focus {
+.sites__arrow--right:hover {
   transform: scale(1.2) rotate(180deg);
   transition: 300ms;
 }
@@ -1167,11 +1168,16 @@ button:focus {
 }
 
 .sites__description {
-  font: inherit;
   font-size: 20px;
   font-weight: 500;
 }
 
+.sites__notification {
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  color: #8993ad;
+}
 
 .prices {
   position: relative;
@@ -1355,9 +1361,12 @@ button:focus {
 }
 
 @media (min-width: 1024px) {
-  .media__button:hover, .media__button:focus {
+  .media__button:hover {
     transform: scale(1.2);
     transition: 300ms;
+  }
+  .media__button:focus {
+    opacity: .5;
   }
 }
 

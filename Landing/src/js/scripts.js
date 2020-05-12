@@ -57,6 +57,8 @@ $(function()
     a11y: {
       prevSlideMessage: 'Назад',
       nextSlideMessage: 'Вперёд',
+      firstSlideMessage: 'Первый пример',
+      lastSlideMessage: 'Последний пример',
       paginationBulletMessage: 'Пример №{{index}}',
       notificationClass: 'sites__notification',
     },

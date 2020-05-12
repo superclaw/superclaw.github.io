@@ -139,7 +139,6 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  font-family: inherit;
   font-weight: 800;
   z-index: 0;
   --move-x: 0;
@@ -226,7 +225,6 @@ button:focus {
 .button {
   background-blend-mode: multiply;
   display: block;
-  font: inherit;
   font-weight: 400;
   text-align: center;
   background: none;
@@ -313,7 +311,6 @@ button:focus {
 
 .h {
   margin: 0;
-  font-family: inherit;
 }
 
 .h--1 {
@@ -433,7 +430,6 @@ button:focus {
 
 .message__text {
   margin: 0;
-  font-family: inherit;
   font-weight: 700;
   font-size: 20px;
 }
@@ -501,7 +497,6 @@ button:focus {
 }
 
 .header__tel {
-  font-family: inherit;
   font-weight: 700;
   margin: -3px 28px 0 auto;
   font-size: 25px;
@@ -677,6 +672,7 @@ button:focus {
 }
 
 .sites__arrow {
+  background-blend-mode: multiply;
   position: absolute;
   top: 219px;
   border: 0;
@@ -688,13 +684,18 @@ button:focus {
   -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1);
           box-shadow: 0 0 15px 5px rgba(0, 0, 0, .1);
 }
-.sites__arrow:hover, .sites__arrow:focus {
+
+.sites__arrow:hover {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: 300ms;
   -o-transition: 300ms;
   transition: 300ms;
+}
+
+.sites__arrow:focus {
+  background-color: rgba(0, 0, 0, .12);
 }
 
 .sites__arrow--left {
@@ -707,7 +708,7 @@ button:focus {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.sites__arrow--right:hover, .sites__arrow--right:focus {
+.sites__arrow--right:hover {
   -webkit-transform: scale(1.2) rotate(180deg);
       -ms-transform: scale(1.2) rotate(180deg);
           transform: scale(1.2) rotate(180deg);
@@ -767,11 +768,16 @@ button:focus {
 }
 
 .sites__description {
-  font: inherit;
   font-size: 20px;
   font-weight: 500;
 }
 
+.sites__notification {
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  color: #8993ad;
+}
 
 .prices {
   position: relative;
@@ -961,13 +967,16 @@ button:focus {
     border-bottom: 1px solid;
     color: #fc557c;
   }
-  .media__button:hover, .media__button:focus {
+  .media__button:hover {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2);
     -webkit-transition: 300ms;
     -o-transition: 300ms;
     transition: 300ms;
+  }
+  .media__button:focus {
+    opacity: .5;
   }
 }
 
