@@ -1405,18 +1405,6 @@ button:focus {
 
 /* for scripts */
 
-.active {
-  display: block;
-}
-
-.button-up--visible {
-  display: block;
-}
-
-.request--active, .message--active {
-  display: flex;
-}
-
 .button-menu--active {
   background: url('../img/icons/close.svg') center center no-repeat;
   background-size: 32px 32px;
@@ -1428,10 +1416,6 @@ button:focus {
   .button-menu--active {
     background-size: 25px auto;
   }
-}
-
-.error {
-  border-color: #bb2200;
 }
 
 label[class$='error'] {
@@ -1448,4 +1432,23 @@ label[class$='error'] {
     margin-top: 3px;
     padding: 1px 3px;
   }
+}
+
+
+/* for scripts last */
+
+.active {
+  display: block;
+}
+
+.button-up--visible {
+  display: block;
+}
+
+.request--active, .message--active {
+  display: flex;
+}
+
+.error {
+  border-color: #bb2200;
 }

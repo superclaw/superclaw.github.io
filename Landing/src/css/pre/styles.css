@@ -896,6 +896,28 @@ button:focus {
 }
 
 
+/* for scripts */
+
+.button-menu--active {
+  background: url('../img/icons/close.svg') center center no-repeat;
+  background-size: 32px 32px;
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+  border: none;
+  z-index: 4;
+}
+
+label[class$='error'] {
+  position: absolute;
+  right: 30px;
+  margin-top: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  border: 1px #bb2200 solid;
+  background-color: #ffeeee;
+}
+
 @media (max-width: 1500px) {
   .button--orange {
     width: 321px;
@@ -1373,7 +1395,7 @@ button:focus {
   }
 }
 
-/* for scripts */
+/* for scripts last */
 
 .active {
   display: block;
@@ -1390,26 +1412,6 @@ button:focus {
   display: flex;
 }
 
-.button-menu--active {
-  background: url('../img/icons/close.svg') center center no-repeat;
-  background-size: 32px 32px;
-  -webkit-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  transform: rotate(360deg);
-  border: none;
-  z-index: 4;
-}
-
 .error {
   border-color: #bb2200;
-}
-
-label[class$='error'] {
-  position: absolute;
-  right: 30px;
-  margin-top: 5px;
-  padding: 2px 5px;
-  font-size: 12px;
-  border: 1px #bb2200 solid;
-  background-color: #ffeeee;
 }
