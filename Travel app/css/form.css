@@ -1,0 +1,258 @@
+.form {
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  background: rgba(65, 70, 70, .98);
+}
+@media (min-width: 577px) {
+  .form {
+    padding: 25px;
+  }
+}
+@media (min-width: 1025px) {
+  .form {
+    padding: 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .form {
+    padding: 35px 48px 56px;
+  }
+}
+
+.form__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  border: 0;
+}
+@media (min-width: 577px) {
+  .form__title {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1025px) {
+  .form__title {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1600px) {
+  .form__title {
+    text-align: left;
+  }
+}
+
+.form__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__label {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px 10px 60px;
+  font-size: 12px;
+  border: 1px solid rgba(231, 231, 242, .3);
+  color: rgba(231, 231, 242, .6);
+}
+@media (min-width: 577px) {
+  .form__label {
+    padding: 15px 30px 15px 60px;
+  }
+}
+@media (min-width: 1025px) {
+  .form__label {
+    font-size: 14px;
+  }
+}
+
+.form__label:not(:nth-last-of-type(1)) {
+  border-bottom-width: 0;
+}
+.form__label:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.form__label:nth-last-of-type(1) {
+  border-radius: 0 0 10px 10px;
+}
+@media (min-width: 1025px) {
+  .form__label:not(:nth-last-of-type(1)) {
+    border-bottom-width: 1px;
+    border-right-width: 0;
+  }
+  .form__label:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+  .form__label:nth-last-of-type(1) {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+@media (min-width: 1600px) {
+  .form__select {
+    padding-right: 40px;
+  }
+}
+
+.form__select::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: 0;
+  right: 15px;
+  background: url('../img/arrow-down.svg') right center no-repeat;
+  opacity: .6;
+}
+@media (min-width: 1600px) {
+  .form__select::after {
+    right: 25px;
+  }
+}
+
+@media (min-width: 577px) {
+  .form__check-in, .form__check-out {
+    width: 50%;
+  }
+  .form__check-in {
+    border-right-width: 0;
+  }
+  .form__check-out {
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .form__accommodation {
+    width: 409px;
+  }
+  .form__check-in {
+    width: 181px;
+  }
+  .form__check-out {
+    width: 135px;
+  }
+  .form__guests {
+    width: 175px;
+  }
+}
+@media (min-width: 1600px) {
+  .form__accommodation {
+    width: 463px;
+  }
+  .form__check-in {
+    width: 191px;
+  }
+  .form__check-out {
+    width: 151px;
+  }
+  .form__guests {
+    width: 266px;
+  }
+}
+
+.form__accommodation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 25px;
+  height: 100%;
+  background: url('../img/place.svg') left center no-repeat;
+  opacity: .6;
+}
+.form__check-in::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 25px;
+  height: 100%;
+  background: url('../img/date.svg') left center no-repeat;
+  opacity: .6;
+}
+.form__guests::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 25px;
+  height: 100%;
+  background: url('../img/human.svg') left center no-repeat;
+  opacity: .6;
+}
+
+.form__input {
+  width: 100%;
+  margin-top: 3px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+}
+@media (min-width: 577px) {
+  .form__input {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 1025px) {
+  .form__input {
+    font-size: 16px;
+  }
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #fff;
+}
+.form__input::-moz-placeholder {
+  color: #fff;
+}
+
+.form__send {
+  width: 180px;
+  padding: 18px 0 17px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  background: #91cb82;
+  border-radius: 10px;
+  transition: opacity 150ms, background-color 150ms;
+  cursor: pointer;
+}
+@media (min-width: 577px) {
+  .form__send {
+    width: 200px;
+    padding: 22px 0 21px;
+    margin-top: 16px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1025px) {
+  .form__send {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1600px) {
+  .form__send {
+    width: 240px;
+    padding: 27px 0 25px;
+    margin-top: 0;
+    margin-left: 30px;
+    font-size: 18px;
+  }
+}
+
+.form__send:active {
+  opacity: .6;
+}
+@media (min-width: 1025px) {
+  .form__send:hover {
+    background: #619b52;
+  }
+}

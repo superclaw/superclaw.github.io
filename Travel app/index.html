@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body">
+
+<header class="header">
+  <div class="wrapper header__wrapper">
+    <nav class="menu">
+      <button class="menu__btn" aria-label="Menu"></button>
+      <ul class="menu__list list">
+        <li class="list__item">
+          <a href="#" class="list__link link">About</a>
+        </li>
+        <li class="list__item">
+          <a href="#" class="list__link link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <span class="logo">Camping.</span>
+    <nav class="auth">
+      <ul class="auth__list list">
+        <li class="list__item">
+          <a href="#" class="list__link link">Sign in</a>
+        </li>
+        <li class="list__item">
+          <a href="#" class="list__link link">Sign up</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="search-btn" aria-label="Search"></button>
+  </div>
+</header>
+
+<main class="main">
+  <div class="wrapper main__wrapper">
+    <section class="main__content">
+      <h1 class="h main__title">Beautiful Places of England</h1>
+      <p class="main__desc">Plan your vacation on the most beautiful places of England</p>
+    </section>
+    <aside class="main__next next">
+      <a href="#" class="next__link" aria-label="Next"></a>
+      <span class="next__text">Up next</span>
+      <h2 class="next__title">Aerial View of Rock Cliffs</h2>
+    </aside>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrapper">
+    <form action="https://jsonplaceholder.typicode.com/posts"
+          class="form" method="post"
+          enctype="application/x-www-form-urlencoded">
+      <fieldset>
+        <legend class="form__title">Book your vacation</legend>
+        <div class="form__container">
+          <label class="form__label form__select form__accommodation">
+            Accommodation
+            <input type="text" class="form__input" name="accommodation"
+                   placeholder="6730 Luna Land North Rhiannonmouth" required>
+          </label>
+          <label class="form__label form__check-in">
+            Check-in
+            <input type="text" class="form__input" name="check-in"
+                   placeholder="19.06.2019" required>
+          </label>
+          <label class="form__label form__check-out">
+            Check-out
+            <input type="text" class="form__input" name="check-out"
+                   placeholder="19.06.2019" required>
+          </label>
+          <label class="form__label form__select form__guests">
+            Guests
+            <input type="text" class="form__input" name="guests"
+                   placeholder="4 adults" required>
+          </label>
+          <input type="submit" class="form__send" value="Search">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</footer>
+</body>
+</html>
