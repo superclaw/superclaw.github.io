@@ -1,0 +1,31 @@
+.comments__form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 60% 0 0;
+  margin-top: 30px;
+  border-top: 1px solid #000;
+}
+
+.comments__author,
+.comments__textarea,
+.comments__submit {
+  padding: 5px;
+  font: inherit;
+  outline: none;
+}
+
+.comments__author {
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+.comments__textarea {
+  height: 110px;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.comments__submit {
+  cursor: pointer;
+}

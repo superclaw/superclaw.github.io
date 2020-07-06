@@ -23,7 +23,7 @@ gulp.task('cssmin', function() {
 });
 
 gulp.task('js', function(){
-  return gulp.src('src/js/scripts.js')
+  return gulp.src('src/js/list.js')
     .pipe(uglify())
     .pipe(rename('scripts.min.js'))
     .pipe(gulp.dest('build/js'));

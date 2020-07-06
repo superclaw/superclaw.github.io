@@ -1,15 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import makeTopic from './modules/topic/scripts';
+import Comments from './modules/comments/scripts';
 
-import Topic from "./modules/topic/scripts";
+const renderMain = topic => {
+  ReactDOM.render(
+      <div className="wrapper">
+        {topic}
+        <Comments/>
+      </div>,
+      document.querySelector('.main')
+  )
+}
 
-const MAIN_WRAPPER = document.querySelector('.wrapper');
+const getData = () => {
+  fetch('http://superclaw.github.io/TopicDiscussion/server/topic.json')
+      .then(response => {
+        (response.ok)
+            ? response.json().then(json => renderMain(makeTopic(json)))
+            : renderMain(makeTopic(null));
+      });
+}
 
-Topic();
-
-/*ReactDOM.render(
-    <Topic />,
-    MAIN_WRAPPER
-);*/
-
+getData();

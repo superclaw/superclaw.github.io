@@ -4,11 +4,9 @@ html {
 }
 
 body {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   background: #c3c3c3;
@@ -20,27 +18,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 40px 0;
 }
 
 .wrapper {
   width: 1000px;
   padding: 0 20px;
   margin: 0 auto;
-}
-
-.topic, .comments {
-  padding: 20px;
-  background: #fff;
-  border-radius: 20px;
-}
-
-.topic {
-  min-height: 300px;
-}
-
-.comments {
-  min-height: 200px;
-  margin-top: 20px;
 }
 
 .visually-hidden {
