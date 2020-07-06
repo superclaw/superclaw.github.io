@@ -15,7 +15,7 @@ const renderMain = topic => {
 }
 
 const getData = () => {
-  fetch('./server/topic.json')
+  fetch('https://maxkiner.github.io/server/topic.json')
       .then(response => {
         (response.ok)
             ? response.json().then(json => renderMain(makeTopic(json)))
