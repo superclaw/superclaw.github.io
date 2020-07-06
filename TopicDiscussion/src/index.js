@@ -15,7 +15,7 @@ const renderMain = topic => {
 }
 
 const getData = () => {
-  fetch('http://superclaw.github.io/TopicDiscussion/server/topic.json')
+  fetch('./server/topic.json')
       .then(response => {
         (response.ok)
             ? response.json().then(json => renderMain(makeTopic(json)))
