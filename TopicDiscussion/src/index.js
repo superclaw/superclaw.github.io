@@ -6,7 +6,7 @@ import './index.css';
 import makeTopic from './modules/topic';
 import Comments from './modules/comments';
 
-export const loadList= () => {
+export const loadList = () => {
   const list = JSON.parse(localStorage.getItem('commentsList'));
   const noList = ['Нет комментариев.'];
   return (!list) ? noList : (list.length) ? list : noList;
