@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Транспортные средства</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/colors.js"></script>
+  <script src="js/vehicles.js"></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/interface.js" defer></script>
+</head>
+<body class="body scroll-off">
+  <div class="pop-up-container">
+    <div class="pop-up">
+      <h1 class="pop-up__header"></h1>
+      <ul class="input pop-up__input"></ul>
+    </div>
+  </div>
+  <section class="main section">
+    <h1 class="main__header">Моё транспортное средство</h1>
+    <article><h2 class="model">Популярная марка - Популярная модель</h2></article>
+    <article>
+      <span>Цвет:&nbsp;</span>
+      <span class="color-text">"Белый"</span>
+      <div class="color color-block"></div>
+    </article>
+    <article>
+      <span>Дата создания:&nbsp;</span>
+      <time class="creation-date">Неизвестно</time>
+    </article>
+  </section>
+  <section class="main-methods section">
+    <h2 class="section__header">Основные действия</h2>
+    <button class="method get-name">Вывести название</button>
+    <button class="method get-color">Вывести цвет</button>
+    <button class="method get-model">Вывести модель (класс)</button>
+  </section>
+  <section class="special-methods section">
+    <h2 class="section__header">Дополнительные действия</h2>
+    <button class="method refuel">Заправить</button>
+    <button class="method start-engine">Запустить двигатель</button>
+    <button class="method start-moving">Начать движение</button>
+    <button class="method use-horn">Подать сигнал</button>
+  </section>
+</body>
+</html>

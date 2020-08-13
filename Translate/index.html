@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Переводчик</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/scripts.js" defer></script>
+</head>
+<body>
+  <form class="translate">
+    <label for="input" class="translate__label">
+      Введите текст в поле слева, выберите язык в выпадающем меню и нажмите "перевести".
+    </label>
+    <textarea id="input" class="translate__input textarea" required></textarea>
+    <div class="translate__output textarea"></div>
+    <label class="lang">
+      С какого языка перевести?
+      <select class="translate__in-lang lang__select" required>
+        <option value="ru" selected>Русский</option>
+        <option value="en">Английский</option>
+      </select>
+    </label>
+    <label class="lang">
+      На какой язык перевести?
+      <select class="translate__out-lang lang__select" required>
+        <option value="ru" disabled>Русский</option>
+        <option value="en">Английский</option>
+      </select>
+    </label>
+    <input type="submit" class="translate__btn" value="Перевести">
+  </form>
+</body>
+</html>

@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  user-select: none;
+}
+
+.body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+.main {
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #333;
+  box-shadow: 0 0 10px #000;
+}
+
+.title {
+  color: #fff;
+  font-size: 24px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #fff;
+}
+
+.new__label {
+  display: block;
+}
+
+.new__text {
+  width: 70%;
+  padding: 2px;
+  margin-bottom: 40px;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #fff;
+  background: #333;
+}
+
+.new__add {
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background: #333;
+  cursor: pointer;
+}
+
+.new__add:hover {
+  border: 1px solid #fff;
+}
+
+.new__add:active {
+  transform: scale(.8);
+}
+
+.list {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 40px;
+  border-bottom: 1px dashed #fff;
+  list-style: none;
+}
+
+.list__item {
+  position: relative;
+  width: 100%;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 3px;
+  border-bottom: 1px dotted #333;
+  transition: left .3s;
+  cursor: pointer;
+}
+
+.list__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list__item:hover {
+  border-color: #fff;
+}
+
+.list__text {
+  padding-left: 25px;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.list__checkbox {
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.list__checkbox::before{
+  content: '\2714';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 15px;
+  padding: 0 3px 2px;
+  font-size: 12px;
+  color: #333;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: #333;
+}
+
+.list__checkbox:checked::before {
+  color: #999;
+  border-color: #999;
+}
+
+.list__checkbox:checked + .list__text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.del {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  color: #333;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  background: #333;
+  cursor: pointer;
+}
+
+.del:hover {
+  border: 1px solid #fff;
+}
+
+.del:active {
+  transform: scale(.8);
+}
+
+.list__item:hover .del {
+  color: #fff;
+}
+
+.list__item--added {
+  left: 800px;
+}
+
+.list__item--deleted {
+  left: -400px;
+}

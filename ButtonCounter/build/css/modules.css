@@ -1,0 +1,22 @@
+.button-counter {
+  width: 100px;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: inherit;
+  font-size: inherit;
+  outline: none;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #393;
+  transition: background-color 300ms, transform 50ms;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button-counter:hover {
+  background-color: #171;
+}
+
+.button-counter:active {
+  transform: scale(.95);
+}

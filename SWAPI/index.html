@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Wars search</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/scripts.js" defer></script>
+</head>
+<body>
+  <div class="content">
+    <div class="search">
+      <div class="search_form">
+        <label>
+          Что искать:
+          <select class="search_select">
+            <option value="people">Персонаж</option>
+            <option value="planets">Планета</option>
+            <option value="starships">Звездолёт</option>
+          </select>
+        </label>
+        <br>
+        <label>
+          Поиск:
+          <input type="text" class="search_input">
+        </label>
+        <button class="button search_btn">Найти</button>
+      </div>
+      <ul class="search_result"></ul>
+    </div>
+
+    <ul class="data">
+      <li class="name">Имя/Название: <span class="data_value"></span></li>
+      <li class="model">Модель: <span class="data_value"></span></li>
+      <li class="starship_class">Класс корабля: <span class="data_value"></span></li>
+      <li class="manufacturer">Изготовитель: <span class="data_value"></span></li>
+      <li class="height">Рост: <span class="data_value"></span></li>
+      <li class="diameter">Диаметр: <span class="data_value"></span></li>
+      <li class="length">Длина: <span class="data_value"></span></li>
+      <li class="mass">Вес: <span class="data_value"></span></li>
+      <li class="population">Популяция: <span class="data_value"></span></li>
+      <li class="residents_count">Резиденции: <span class="data_value"></span></li>
+      <li class="crew">Экипаж: <span class="data_value"></span></li>
+      <li class="passengers">Пассажиры: <span class="data_value"></span></li>
+      <li class="birth_year">Год рождения: <span class="data_value"></span></li>
+      <li class="cost_in_credits">Стоимость в кредитах: <span class="data_value"></span></li>
+      <li class="films_count">Участие в фильмах: <span class="data_value"></span></li>
+    </ul>
+  </div>
+</body>
+</html>
