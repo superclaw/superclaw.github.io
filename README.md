@@ -1,8 +1,16 @@
 # Список проектов:
 
+## `Приложение на React/Typescript`
+
+[Ссылка](https://superclaw.github.io/phoiewer/build/), [Репозиторий](https://github.com/superclaw/phoiewer)
+
 ## `Лендинг`
 
 [Ссылка](https://superclaw.github.io/Landing/build/), [Репозиторий](https://github.com/superclaw/superclaw.github.io/tree/master/Landing)
+
+## `Тестовый сайт на React`
+
+[Ссылка](https://superclaw.github.io/animal_shelter/build/), [Репозиторий](https://github.com/superclaw/animal_shelter)
 
 ## Мини-работы
 
